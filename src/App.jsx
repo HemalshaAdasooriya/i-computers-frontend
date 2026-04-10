@@ -1,25 +1,13 @@
 import './App.css'
 import Header from './components/header'
 import ProductCard from './components/productCard'
+import Test from './components/test'
 
 function App() {
 
   return (
-    <div className='w-[600px] h-[600px] bg-gray-300 border relative'>
-      <div className='w-[500px] h-[500px] bg-yellow-300 flex flex-col items-center justify-center'>
-        <div className='w-[100px] h-[100px] bg-blue-400'>
-
-        </div>
-        <div className='w-[100px] h-[100px] bg-red-400 fixed left-[550px] top-[550px]'>
-
-        </div>
-        <div className='w-[100px] h-[100px] bg-green-400'>
-
-        </div>
-        <div className='w-[100px] h-[100px] bg-purple-400 absolute right-[100px] bottom-[100px]'>
-
-        </div>
-      </div>
+    <div className='w-full h-[600px]'>
+      <Test/>
     </div>
   )
 }
