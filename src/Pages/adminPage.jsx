@@ -1,3 +1,7 @@
+import { Link, Route, Routes, } from "react-router-dom";
+import { LuBoxes, LuClipboardList, LuUsers } from "react-icons/lu";
+import { FaRegCommentAlt } from "react-icons/fa";
+
 export default function AdminPage() {
     return (
         <div className="w-full h-screen flex bg-accent">
@@ -7,15 +11,20 @@ export default function AdminPage() {
                     <h1 className="font-bold ml-[70px]  text-3xl">Admin</h1>
                 </div>
                 <div className="w-full h-[400px] text-secondary text-3xl mt-10 ml-5 flex flex-col">
-                    <a href="admin/">Order</a>
-                    <a href="admin/products">Products</a>
-                    <a href="admin/users">User</a>
-                    <a href="admin/reviews">Review</a>
+                    <Link to="/admin"className="w-full flex items-center h-[50px] gap-[10px]"><LuClipboardList />Order</Link>
+                    <Link to="/admin/products"className="w-full flex items-center h-[50px] gap-[10px]"><LuBoxes />Products</Link>
+                    <Link to="/admin/users"className="w-full flex items-center h-[50px] gap-[10px]"><LuUsers />User</Link>
+                    <Link to="/admin/reviews"className="w-full flex items-center h-[50px] gap-[10px]"><FaRegCommentAlt />Review</Link>
                 </div>
 
             </div>
             <div className="h-full w-[calc(100%-300px)] max-h-full border-[10px] rounded-3xl border-accent bg-primary overflow-y-scroll text-2xl text-secondary" >
-               
+               <Routes>
+                    <Route path="/" element={<h1>Order</h1>} />
+                    <Route path="/products" element={<h1>Products</h1>} />
+                    <Route path="/users" element={<h1>User</h1>} />
+                    <Route path="/reviews" element={<h1>Review</h1>} />
+               </Routes>
             </div>
 
         </div>
