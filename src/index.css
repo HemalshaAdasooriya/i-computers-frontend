@@ -4,6 +4,7 @@
   --color-primary: #2D3748;
   --color-secondary: white;
   --color-accent: #00ADB5;
+  --color-tag:#1d99b6;
 }
 
 @layer utilities {
