@@ -18,7 +18,9 @@ export default function LoginPage() {
             email: email,
             password: password
         });
-        console.log(res.data);
+        console.log(res);
+
+        localStorage.setItem("token", res.data.token);
 
         if(res.data.role === "admin"){
 
